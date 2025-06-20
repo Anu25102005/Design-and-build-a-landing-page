@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chess Board</title>
+</head>
+<body>
+  <h2><center>CHESS BOARD</center></h2>
+  <div id="table-container"></div>
+  <script>
+   
+    let rows = parseInt(prompt("Enter number of rows:"));
+    let cols = parseInt(prompt("Enter number of columns:"));
+
+    if (isNaN(rows) || isNaN(cols) || rows <= 0 || cols <= 0) {
+      alert("Please enter valid positive numbers.");
+    } else {
+      let table = "<table border='1' cellspacing='0' cellpadding='0' style='margin:auto; margin-top:50px; border-collapse: collapse;'>";
+
+      for (let i = 0; i < rows; i++) {
+        table += "<tr>";
+
+        for (let j = 0; j < cols; j++) {
+          let color = (i + j) % 2 === 0 ? "white" : "black";
+          table += "<td style='background-color:" + color +"; width: 50px; height: 50px;''></td>";
+        }
+        table += "</tr>";
+      }
+      table += "</table>";
+      document.getElementById("table-container").innerHTML = table;
+    } 
+  </script>
+</body>
+</html>

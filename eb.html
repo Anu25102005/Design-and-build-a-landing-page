@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+//      units = parseFloat(prompt('Enter the number of electricity units consumed:'));
+// if (units <= 100){
+//   alert('Free');
+// } else if (units <= 200){
+//    alert('₹2');
+// } else if (units <= 300){
+//   alert('₹3');
+// } else if (units <= 400){
+//   alert('₹4'); 
+// } else if (units <= 500){
+//   alert('₹5');
+// }else{
+//   alert('₹10');
+// }
+ units = parseFloat(prompt('Enter the number of electricity units consumed:'));
+ let bill=0;
+    if (isNaN(units)||units<0){
+      alert('Enter the valid input number')
+    } else if (units <= 100) {
+      bill = 0;
+    } else if (units <= 200) {
+      bill = (units - 100) * 2;
+    } else if (units <= 300) {
+      bill = (100 * 2) + (units - 200) * 3;
+    } else if( units <= 400){
+      bill = (100 * 2) + (100 * 3) + (units - 300) * 4;
+    } else if( units <= 500){
+      bill = (100 * 2) + (100 * 3) + (100 * 4) + (units - 400) * 5;
+    } else {
+      bill = (100 * 2) + (100 * 3) + (100 * 4) + (100 * 5) + (units - 500) * 10;
+    }
+    alert('Your EB Bill amount is ₹' + bill.toFixed(2));
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Questionnaire Form</title>
+ </head>
+ <body>
+   <center><h1>Product Feedback Questionnaire</h1></center>
+  <form action="/submit" method="post">
+    <label for="name">First Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="name">Last  Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="age">Your Age:</label><br>
+    <input type="number" min="15" max="50" id="age" name="age"><br><br>
+    <label for="product">Product Name:</label><br>
+    <input type="text" id="product" name="product" required><br><br>
+    <label>How would you rate the product?</label><br><br>
+    <input type="radio" name="rating" value="Excellent" required> Excellent<br>
+    <input type="radio" name="rating" value="Good"> Good<br>
+    <input type="radio" name="rating" value="Average"> Average<br>
+    <input type="radio" name="rating" value="Poor"> Poor<br><br>
+    <label for="used">How long have you used our product?</label><br><br>
+    <select id="used" name="used">
+      <option>--SELECT--</option>
+      <option value="more than 6 months">More than 6 months</option>
+      <option value="1 to 6 months">1 to 6 months</option>
+      <option value="less than 1 month">Less than 1 month</option>
+      <option value="first time using it">First time using it</option>
+      <option value="never used">Never used</option>
+    </select><br><br>
+    <label>Which features did you like?</label><br><br>
+    <input type="checkbox" name="features" value="Design">
+    <label for="features">Design</label><br>
+    <input type="checkbox" name="features" value="Performance">
+    <label for="features">Performance</label><br>
+    <input type="checkbox" name="features" value="Ease of use">
+    <label for="features">Ease of use</label><br>
+    <input type="checkbox" name="features" value="Price">
+    <label for="features">Price</label><br><br>
+    <label for="comments">Additional Comments:</label><br><br>
+    <textarea id="comments" name="comments" rows="7" cols="70"></textarea><br><br>
+    <button type="submit">Submit Feedback</button>
+    <button type="reset">Reset Form</button>
+  </form>
+ </body>
+</html>
+
+
+
